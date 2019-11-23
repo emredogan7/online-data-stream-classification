@@ -24,6 +24,8 @@ public class Main {
         System.out.println("Constructing the Naive Bayes Classifier:");
         moa.runNaiveBayes();
 
+        moa.ensembleMethods();
+
 
     }
 }
