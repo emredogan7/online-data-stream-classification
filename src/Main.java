@@ -15,7 +15,7 @@ public class Main {
         moa.setFileName("RBFdataset");
         moa.setNumberOfInstances(10000);
 
-        moa.dataGenerator();
+        moa.dataGenerator(10,2);
         moa.importARFF();
 
         System.out.println("Constructing the Hoeffding Tree Classifier:");
@@ -23,8 +23,6 @@ public class Main {
 
         System.out.println("Constructing the Naive Bayes Classifier:");
         moa.runNaiveBayes();
-
-        moa.ensembleMethods();
 
 
     }

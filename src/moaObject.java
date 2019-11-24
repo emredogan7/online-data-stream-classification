@@ -23,12 +23,13 @@ public class moaObject {
     public void setFileName(String fileName){
         this.fileName = fileName;
     }
-    public void dataGenerator(){
+
+    public void dataGenerator(int numberOfAttributes, int numberOfClasses){
         RandomRBFGenerator stream = new RandomRBFGenerator();
         stream.prepareForUse();
 
-        stream.numAttsOption.setValue(10);
-        stream.numClassesOption.setValue(2);
+        stream.numAttsOption.setValue(numberOfAttributes);
+        stream.numClassesOption.setValue(numberOfClasses);
         stream.instanceRandomSeedOption.setValue(1);
 
         WriteStreamToARFFFile task = new WriteStreamToARFFFile();
@@ -94,12 +95,6 @@ public class moaObject {
     public void runNaiveBayes(){
         Classifier learnerBayes = new NaiveBayes();
         modelEvaluator(learnerBayes);
-
-    }
-
-    public void ensembleMethods(){
-        WeightedMajorityAlgorithm wma = new WeightedMajorityAlgorithm();
-        System.out.println();
 
     }
 }
