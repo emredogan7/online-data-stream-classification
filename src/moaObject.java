@@ -6,7 +6,6 @@ import moa.tasks.WriteStreamToARFFFile;
 import moa.streams.ArffFileStream;
 import moa.core.TimingUtils;
 import com.yahoo.labs.samoa.instances.Instance;
-import moa.classifiers.meta.WeightedMajorityAlgorithm;
 
 import moa.tasks.EvaluateInterleavedTestThenTrain;
 
@@ -47,7 +46,6 @@ public class moaObject {
     }
 
 
-
     public void modelEvaluator(Classifier classifier){
         this.importedStream.prepareForUse();
         classifier.setModelContext(this.importedStream.getHeader());
@@ -71,32 +69,23 @@ public class moaObject {
 
             //System.out.println(100.0 * (double)numberSamplesCorrect/ (double) numberSamples);
         }
-        double accuracy = 100.0 * (double)
-                numberSamplesCorrect/ (double) numberSamples;
-
+        double accuracy = 100.0 * (double) numberSamplesCorrect/ (double) numberSamples;
 
         double time = TimingUtils.nanoTimeToSeconds(TimingUtils.getNanoCPUTimeOfCurrentThread()- evaluateStartTime);
 
-
         System.out.println(numberSamples + " instances processed with " + accuracy + "% accuracy in "+time+"seconds.");
-
-
     }
-
 
     public void runHoeffdingTree(){
         Classifier learnerHoeffding = new HoeffdingTree();
         modelEvaluator(learnerHoeffding);
-
     }
-
-
 
     public void runNaiveBayes(){
         Classifier learnerBayes = new NaiveBayes();
         modelEvaluator(learnerBayes);
-
     }
+
 }
 
 

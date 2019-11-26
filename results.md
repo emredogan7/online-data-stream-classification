@@ -13,7 +13,7 @@ Constructing the Naive Bayes Classifier:
 
 
 ## Observing the Effect of Number of Features: 
-In order to observe the effect of feature numbers in terms of evaluation metrics, a controlled experiment is set up.
+In order to observe the effect of feature numbers in terms of evaluation results, a controlled experiment is set up.
 
 While keeping the number of classes constant (2 in our case), different number of features are chosen to observe its effect on the prediction performance.
 
@@ -119,5 +119,37 @@ Constructing the Naive Bayes Classifier:
 ________________________________________________________
 ~~~~
 
+## Observing the Effect of Number of Classes: 
+In order to observe the effect of class number in terms of evaluation results, a controlled experiment is set up.
 
+While keeping the number of attributes constant (10 in our case), different number of classes are chosen to observe its effect on the prediction performance.
 
+The number of features is selected in the range [2,6]. The results for Hoeffding Tree and Naive Bayes are given below.
+
+~~~~
+Starting to the process!
+Constructing the pipeline for 2 classes:
+Constructing the Hoeffding Tree Classifier:
+10000 instances processed with 74.95% accuracy in 0.646745325seconds.
+Constructing the Naive Bayes Classifier:
+10000 instances processed with 71.3% accuracy in 0.276421254seconds.
+________________________________________________________
+Constructing the pipeline for 3 classes:
+Constructing the Hoeffding Tree Classifier:
+10000 instances processed with 68.68% accuracy in 0.227385666seconds.
+Constructing the Naive Bayes Classifier:
+10000 instances processed with 67.66% accuracy in 0.11599692seconds.
+________________________________________________________
+Constructing the pipeline for 4 classes:
+Constructing the Hoeffding Tree Classifier:
+10000 instances processed with 65.66% accuracy in 0.156985306seconds.
+Constructing the Naive Bayes Classifier:
+10000 instances processed with 65.62% accuracy in 0.122100282seconds.
+________________________________________________________
+Constructing the pipeline for 5 classes:
+Constructing the Hoeffding Tree Classifier:
+10000 instances processed with 52.6% accuracy in 0.159835326seconds.
+Constructing the Naive Bayes Classifier:
+10000 instances processed with 52.6% accuracy in 0.115410558seconds.
+________________________________________________________
+~~~~
