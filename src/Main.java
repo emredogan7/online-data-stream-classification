@@ -15,6 +15,10 @@ public class Main {
         moa.setFileName("RBFdataset");
         moa.setNumberOfInstances(10000);
 
+
+
+        /*
+        // Base Case Setup:
         moa.dataGenerator(10,2);
         moa.importARFF();
 
@@ -23,6 +27,22 @@ public class Main {
 
         System.out.println("Constructing the Naive Bayes Classifier:");
         moa.runNaiveBayes();
+        */
+
+        // Observing the Effect of the Number of Features:
+        for (int numberOfFeatures = 5; numberOfFeatures < 21; numberOfFeatures++) {
+            System.out.println("Constructing the pipeline for "+Integer.toString(numberOfFeatures)+ " features:");
+            moa.dataGenerator(numberOfFeatures,2);
+            moa.importARFF();
+
+            System.out.println("Constructing the Hoeffding Tree Classifier:");
+            moa.runHoeffdingTree();
+
+            System.out.println("Constructing the Naive Bayes Classifier:");
+            moa.runNaiveBayes();
+            System.out.println("________________________________________________________");
+
+        }
 
 
     }

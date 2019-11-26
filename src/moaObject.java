@@ -30,7 +30,7 @@ public class moaObject {
 
         stream.numAttsOption.setValue(numberOfAttributes);
         stream.numClassesOption.setValue(numberOfClasses);
-        stream.instanceRandomSeedOption.setValue(1);
+        // stream.instanceRandomSeedOption.setValue(1);
 
         WriteStreamToARFFFile task = new WriteStreamToARFFFile();
         task.getOptions().resetToDefaults();
