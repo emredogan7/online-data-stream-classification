@@ -6,6 +6,9 @@ import moa.tasks.WriteStreamToARFFFile;
 import moa.streams.ArffFileStream;
 import moa.core.TimingUtils;
 import com.yahoo.labs.samoa.instances.Instance;
+import java.io.FileWriter;
+import java.io.File;
+import java.io.IOException;
 
 import moa.tasks.EvaluateInterleavedTestThenTrain;
 
@@ -46,7 +49,7 @@ public class moaObject {
     }
 
 
-    public void modelEvaluator(Classifier classifier){
+    public void modelEvaluator(Classifier classifier) throws IOException {
         this.importedStream.prepareForUse();
         classifier.setModelContext(this.importedStream.getHeader());
         classifier.prepareForUse();
@@ -67,21 +70,22 @@ public class moaObject {
             numberSamples++;
             classifier.trainOnInstance(trainInst);
 
-            //System.out.println(100.0 * (double)numberSamplesCorrect/ (double) numberSamples);
+            System.out.println(100.0 * (double)numberSamplesCorrect/ (double) numberSamples);
         }
         double accuracy = 100.0 * (double) numberSamplesCorrect/ (double) numberSamples;
-
         double time = TimingUtils.nanoTimeToSeconds(TimingUtils.getNanoCPUTimeOfCurrentThread()- evaluateStartTime);
+
+
 
         System.out.println(numberSamples + " instances processed with " + accuracy + "% accuracy in "+time+"seconds.");
     }
 
-    public void runHoeffdingTree(){
+    public void runHoeffdingTree() throws IOException {
         Classifier learnerHoeffding = new HoeffdingTree();
         modelEvaluator(learnerHoeffding);
     }
 
-    public void runNaiveBayes(){
+    public void runNaiveBayes() throws IOException {
         Classifier learnerBayes = new NaiveBayes();
         modelEvaluator(learnerBayes);
     }

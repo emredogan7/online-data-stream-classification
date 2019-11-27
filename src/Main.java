@@ -8,7 +8,7 @@ import moa.streams.ArffFileStream;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         System.out.println("Starting to the process!");
 
         moaObject moa = new moaObject();
@@ -17,7 +17,7 @@ public class Main {
 
 
 
-        /*
+
         // Base Case Setup:
         moa.dataGenerator(10,2);
         moa.importARFF();
@@ -28,7 +28,7 @@ public class Main {
         System.out.println("Constructing the Naive Bayes Classifier:");
         moa.runNaiveBayes();
 
-
+        /*
         // Observing the Effect of the Number of Features:
         for (int numberOfFeatures = 5; numberOfFeatures < 21; numberOfFeatures++) {
             System.out.println("Constructing the pipeline for "+Integer.toString(numberOfFeatures)+ " features:");
@@ -46,6 +46,8 @@ public class Main {
         */
 
         // Observing the Effect of the Number of Classes:
+
+        /*
         for (int numberOfClasses = 2; numberOfClasses <6; numberOfClasses++) {
             System.out.println("Constructing the pipeline for "+numberOfClasses+ " classes:");
             moa.dataGenerator(10,numberOfClasses);
@@ -59,6 +61,7 @@ public class Main {
             System.out.println("________________________________________________________");
 
         }
+        */
 
 
 
