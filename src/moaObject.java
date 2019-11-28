@@ -56,6 +56,8 @@ public class moaObject {
 
 
         int numberSamplesCorrect = 0;
+        int numberSamplesCorrectLast100 = 0;
+        int groupCounter = 0;
         int numberSamples = 0;
         long evaluateStartTime = TimingUtils.getNanoCPUTimeOfCurrentThread();
 
@@ -65,12 +67,22 @@ public class moaObject {
 
             if (classifier.correctlyClassifies(trainInst)){
                 numberSamplesCorrect++;
+                numberSamplesCorrectLast100++;
+                // System.out.println(1);
             }
 
             numberSamples++;
+            groupCounter++;
+
             classifier.trainOnInstance(trainInst);
 
-            System.out.println(100.0 * (double)numberSamplesCorrect/ (double) numberSamples);
+            if(groupCounter==100){
+                System.out.println(numberSamplesCorrectLast100/100.0);
+                numberSamplesCorrectLast100 = 0;
+                groupCounter = 0;
+            }
+
+            // System.out.println(100.0 * (double)numberSamplesCorrect/ (double) numberSamples);
         }
         double accuracy = 100.0 * (double) numberSamplesCorrect/ (double) numberSamples;
         double time = TimingUtils.nanoTimeToSeconds(TimingUtils.getNanoCPUTimeOfCurrentThread()- evaluateStartTime);
