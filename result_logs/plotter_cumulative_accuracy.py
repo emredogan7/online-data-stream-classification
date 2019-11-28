@@ -34,32 +34,20 @@ for j in nb:
 plt.figure(figsize=(13,4), dpi=130) # 10 is width, 4 is height
 plt.subplots_adjust(hspace = 0.8, wspace=0.3)
 
+
 # Left hand side plot
-plt.subplot(2,2,1)  # (nRows, nColumns, axes number to plot)
+plt.subplot(1,2,1)  # (nRows, nColumns, axes number to plot)
 plt.grid(True)
 plt.plot(range(0,len(values_HT)), values_HT,'g')  # green dots
 plt.title('Prequential Accuracy Results of Hoeffding Tree Classifier',fontsize= 10)  
 plt.xlabel('Data Instances'); plt.ylabel('Accuracy Value')
 plt.ylim(30, 80)
 # Right hand side plot
-plt.subplot(2,2,2)
+plt.subplot(1,2,2)
 plt.grid(True)
 plt.plot(range(0,len(values_NB)), values_NB,'r' )  # green dots
 plt.title('Prequential Accuracy Results of Naïve Bayes Classifier',fontsize= 10)  
 plt.xlabel('Data Instances'); plt.ylabel('Accuracy Value')
 plt.ylim(30, 80)
-# Right hand side plot
-plt.subplot(2,2,3)
-plt.grid(True)
-plt.plot(range(0,len(valuesGrouped_HT)), valuesGrouped_HT,'b.',markersize=2)  # green dots
-plt.title('Prequential Accuracy Results of Naïve Bayes Classifier',fontsize= 10)  
-plt.xlabel('Data Instances'); plt.ylabel('Accuracy Value')
-plt.ylim(30, 80)
-# Right down
-plt.subplot(2,2,4)
-plt.grid(True)
-plt.plot(range(0,len(valuesGrouped_NB)), valuesGrouped_NB,'b' )  # green dots
-plt.title('Prequential Accuracy Results of Naïve Bayes Classifier',fontsize= 10)  
-plt.xlabel('Data Instances'); plt.ylabel('Accuracy Value')
-plt.ylim(30, 80)
 plt.show()
+
