@@ -39,14 +39,14 @@ plt.subplots_adjust(hspace = 0.8, wspace=0.3)
 plt.subplot(1,2,1)  # (nRows, nColumns, axes number to plot)
 plt.grid(True)
 plt.plot(range(0,len(values_HT)), values_HT,'g')  # green dots
-plt.title('Prequential Accuracy Results of Hoeffding Tree Classifier',fontsize= 10)  
+plt.title('Cumulative Accuracy Results of Hoeffding Tree Classifier: \n 10 features, 2 classes',fontsize= 10)  
 plt.xlabel('Data Instances'); plt.ylabel('Accuracy Value')
 plt.ylim(30, 80)
 # Right hand side plot
 plt.subplot(1,2,2)
 plt.grid(True)
 plt.plot(range(0,len(values_NB)), values_NB,'r' )  # green dots
-plt.title('Prequential Accuracy Results of Naïve Bayes Classifier',fontsize= 10)  
+plt.title('Cumulative Accuracy Results of Naïve Bayes Classifier: \n 10 features, 2 classes',fontsize= 10)  
 plt.xlabel('Data Instances'); plt.ylabel('Accuracy Value')
 plt.ylim(30, 80)
 plt.show()
