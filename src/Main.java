@@ -19,7 +19,7 @@ public class Main {
 
 
         // Base Case Setup:
-        moa.dataGenerator(10,2);
+        moa.dataGenerator(19,2);
         moa.importARFF();
 
         System.out.println("Constructing the Hoeffding Tree Classifier:");

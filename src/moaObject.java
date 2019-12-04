@@ -89,7 +89,7 @@ public class moaObject {
 
 
 
-        System.out.println(numberSamples + " instances processed with " + accuracy + "% accuracy in "+time+"seconds.");
+        // System.out.println(numberSamples + " instances processed with " + accuracy + "% accuracy in "+time+"seconds.");
     }
 
     public void runHoeffdingTree() throws IOException {
