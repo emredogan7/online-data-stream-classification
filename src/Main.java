@@ -65,16 +65,5 @@ public class Main {
 
 
 
-
-        /*
-        TODOList:
-        Observing the Relation Between the Number of Attributes and the Number of Classes:
-        Observing the Effect of the Number of Attributes with a Larger Number of Instances:
-        Observing the Effect of the Number of Classes with a Larger Number of Instances:
-        Make sure that you show prequential results, the change in performance as you process the data items, in your plots.
-        ==> keep accuracy value cumulatively for all the data instances.!.
-        */
-
-
     }
 }
