@@ -68,19 +68,20 @@ plt.plot(values_HT13, label="13 features")  # green dots
 plt.plot(values_HT16, label="16 features")  # green dots
 plt.plot(values_HT19, label="19 features")  # green dots
 plt.legend(prop={'size': 6}, loc="upper left")
-plt.title('Prequential Accuracy Results for Data Chunks of Size 100 \n for Hoeffding Tree Classifier: 10 features, 2 classes',fontsize= 8)  
-plt.xlabel('Data Groups of Size 100'); plt.ylabel('Accuracy Value')# Right hand side plot
-plt.ylim(50,110)
+plt.title('Prequential Accuracy Results for Data Chunks of Size 100 \n for Hoeffding Tree Classifier: different number of features, 2 classes',fontsize= 8)  
+plt.xlabel('Data Chunks of Size 100'); plt.ylabel('Accuracy Value')# Right hand side plot
+plt.ylim(50,105)
 ############
 plt.subplot(1,2,2)
 plt.grid(True)
-plt.plot(values_NB7)  # green dots
-plt.plot(values_NB)  # green dots
-plt.plot(values_NB13)  # green dots
-plt.plot(values_NB16)  # green dots
-plt.plot(values_NB19) 
-plt.title('Prequential Accuracy Results of Data Chunks of Size 100 \n for Naïve Bayes Classifier: 10 features, 2 classes',fontsize= 8)  
-plt.xlabel('Data Groups of Size 100'); plt.ylabel('Accuracy Value')
-plt.ylim(30, 90)
+plt.plot(values_NB7,label="7 features")  # green dots
+plt.plot(values_NB,label="10 features")  # green dots
+plt.plot(values_NB13,label="13 features")  # green dots
+plt.plot(values_NB16,label="16 features")  # green dots
+plt.plot(values_NB19, label="19 features") 
+plt.legend(prop={'size': 6}, loc="upper left")
+plt.title('Prequential Accuracy Results of Data Chunks of Size 100 \n for Naïve Bayes Classifier: different number of features, 2 classes',fontsize= 8)  
+plt.xlabel('Data Chunks of Size 100'); plt.ylabel('Accuracy Value')
+plt.ylim(50,105)
 plt.show()
 
