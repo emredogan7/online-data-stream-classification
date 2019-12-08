@@ -57,7 +57,7 @@ Figure 3. Cumulative Accuracy Results of HT and NB classifiers with different nu
 
 
 #### 2) Prequential Accuracy:  
-![Prequential Accuracy Results of HT and NB classifiers with different number of classes and 10 features](./figs/multi_classes_cumulative_accuracy.png)
+![Prequential Accuracy Results of HT and NB classifiers with different number of classes and 10 features](./figs/multi_classes_prequential_accuracy.png)
 Figure 4. Prequential Accuracy Results (100 chunks consisting of 100 data instances each) of HT and NB classifiers with different number of classes and 10 features
 
 
