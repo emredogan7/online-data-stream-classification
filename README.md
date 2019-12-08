@@ -51,11 +51,12 @@ Figure 2. Prequential Accuracy Results (100 chunks consisting of 100 data instan
 
 Similar to the process completed in the previous step, cumulative and prequential accuracy results are illustrated for different number of classes (fixed feature number: 10) in Figure 3 and 4, respectively.
 
-
+#### 1) Cumulative Accuracy:
 ![Cumulative Accuracy Results of HT and NB classifiers with different number of classes and 10 features](./figs/multi_classes_cumulative_accuracy.png)
 Figure 3. Cumulative Accuracy Results of HT and NB classifiers with different number of classes and 10 features
 
 
+#### 2) Prequential Accuracy:  
 ![Prequential Accuracy Results of HT and NB classifiers with different number of classes and 10 features](./figs/multi_classes_cumulative_accuracy.png)
 Figure 4. Prequential Accuracy Results (100 chunks consisting of 100 data instances each) of HT and NB classifiers with different number of classes and 10 features
 
